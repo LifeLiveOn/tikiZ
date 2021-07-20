@@ -190,8 +190,10 @@ body{
     margin-top: 20px;
   }
   #chat_logout{
-    color: #D64045;
+    color: #111827;
     cursor: pointer;
+    font-size: larger;
+    font-weight: bold;
   }
   #chat_logout:hover{
     text-decoration: underline;
