@@ -293,6 +293,7 @@ window.onload = function() {
           ordered.forEach(function(data) {
             var name = data.name
             var message = data.message
+            var index = data.index
             if (name == temp ){
             var message_container = document.createElement('div')
             message_container.setAttribute('class', 'message_container')
@@ -305,7 +306,7 @@ window.onload = function() {
   
             var cmessage_user = document.createElement('p')
             cmessage_user.setAttribute('class', 'cmessage_user')
-            cmessage_user.textContent = `${name}`
+            cmessage_user.textContent = `${name}#${index}`
   
             var message_content_container = document.createElement('div')
             message_content_container.setAttribute('class', 'message_content_container')
