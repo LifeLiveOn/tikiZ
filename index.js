@@ -1,14 +1,21 @@
 // We enclose this in window.onload.
 // So we don't have ridiculous errors.
+import "tailwindcss/tailwind.css"
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
 window.onload = function() {
     // Initialize Firebase
     var firebaseConfig = {
-      apiKey: "AIzaSyCRMZjr9PA3mk_VajNRXruydPPgq-VF25A",
-    authDomain: "my-chat-app-62791.firebaseapp.com",
-    projectId: "my-chat-app-62791",
-    storageBucket: "my-chat-app-62791.appspot.com",
-    messagingSenderId: "837483986851",
-    appId: "1:837483986851:web:645fb00592a47f523d2416"
+      apiKey: "AIzaSyBy-PXEytLgm5Tzk1OeeJk4zHlDEOaSfTs",
+      authDomain: "test-a3070.firebaseapp.com",
+      projectId: "test-a3070",
+      storageBucket: "test-a3070.appspot.com",
+      messagingSenderId: "317304949583",
+      appId: "1:317304949583:web:7824edc355f2743e92d33a"
     };
     firebase.initializeApp(firebaseConfig);
     // This is very IMPORTANT!! We're going to use "db" a lot.
@@ -67,7 +74,7 @@ window.onload = function() {
         var join_input = document.createElement('input')
         join_input.setAttribute('id', 'join_input')
         join_input.setAttribute('maxlength', 15)
-        join_input.placeholder = 'Enter username'
+        join_input.placeholder = 'Enter your username'
         // Every time we type into the join_input
         join_input.onkeyup  = function(){
           // If the input we have is longer that 0 letters

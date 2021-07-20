@@ -1,3 +1,6 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 body{
     /* https://www.color-hex.com/color/d3d3d3 */
     background-color: #fff; /*#f6f6f6, EBEBD3, fafafa*/
@@ -109,7 +112,7 @@ body{
     font-size: 15px;
     font-weight: bold;
     text-align: center;
-    color: #1d3354;
+    color: #fff;
   }
   
   #chat_container{
@@ -158,7 +161,7 @@ body{
     width: 95%;
     height: 100%;
     float: left;
-    background-color: #84a8e4;
+    background-color: Transparent;
     color: #1D3354;
     font-size: 15px;
   }
