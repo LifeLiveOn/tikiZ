@@ -1,6 +1,6 @@
 // We enclose this in window.onload.
 // So we don't have ridiculous errors.
-import "tailwindcss/tailwind.css"
+
 module.exports = {
   plugins: {
     tailwindcss: {},
