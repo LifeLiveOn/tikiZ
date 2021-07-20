@@ -290,7 +290,7 @@ window.onload = function() {
           ordered.forEach(function(data) {
             var name = data.name
             var message = data.message
-            if (name == parent.get_name() ){
+            if (name == this.name ){
             var message_container = document.createElement('div')
             message_container.setAttribute('class', 'message_container')
   
