@@ -213,6 +213,7 @@ body{
     display: inline-block;
   }
   .message_user{
+    background-color:#00c9ff;
     font-weight: bold;
     font-size: 14px;
   }
