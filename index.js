@@ -8,7 +8,6 @@ module.exports = {
     require('autoprefixer'),
   ]
 }
-import "tailwindcss/tailwind.css"
 window.onload = function() {
     // Initialize Firebase
     var firebaseConfig = {
