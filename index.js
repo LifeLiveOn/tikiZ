@@ -2,11 +2,13 @@
 // So we don't have ridiculous errors.
 
 module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  }
+  plugins: [
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ]
 }
+import "tailwindcss/tailwind.css"
 window.onload = function() {
     // Initialize Firebase
     var firebaseConfig = {
