@@ -1,13 +1,5 @@
 // We enclose this in window.onload.
 // So we don't have ridiculous errors.
-
-module.exports = {
-  plugins: [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-  ]
-}
 window.onload = function() {
     // Initialize Firebase
     var firebaseConfig = {
