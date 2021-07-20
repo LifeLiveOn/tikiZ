@@ -290,7 +290,34 @@ window.onload = function() {
           ordered.forEach(function(data) {
             var name = data.name
             var message = data.message
+            if (name == data.parent.get_name() ){
+            var message_container = document.createElement('div')
+            message_container.setAttribute('class', 'message_container')
   
+            var message_inner_container = document.createElement('div')
+            message_inner_container.setAttribute('class', 'message_inner_container')
+  
+            var message_user_container = document.createElement('div')
+            message_user_container.setAttribute('class', 'message_user_container')
+  
+            var cmessage_user = document.createElement('p')
+            cmessage_user.setAttribute('class', 'cmessage_user')
+            cmessage_user.textContent = `${name}`
+  
+            var message_content_container = document.createElement('div')
+            message_content_container.setAttribute('class', 'message_content_container')
+  
+            var cmessage_content = document.createElement('p')
+            cmessage_content.setAttribute('class', 'cmessage_content')
+            cmessage_content.textContent = `${message}`
+  
+            message_user_container.append(cmessage_user)
+            message_content_container.append(cmessage_content)
+            message_inner_container.append(message_user_container, message_content_container)
+            message_container.append(message_inner_container)
+  
+            chat_content_container.append(message_container)
+            }
             var message_container = document.createElement('div')
             message_container.setAttribute('class', 'message_container')
   
