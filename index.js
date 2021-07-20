@@ -320,6 +320,7 @@ window.onload = function() {
   
             chat_content_container.append(message_container)
             }
+              else{
             var message_container = document.createElement('div')
             message_container.setAttribute('class', 'message_container')
   
@@ -346,6 +347,7 @@ window.onload = function() {
             message_container.append(message_inner_container)
   
             chat_content_container.append(message_container)
+              }
           });
           // Go to the recent message at the bottom of the container
           chat_content_container.scrollTop = chat_content_container.scrollHeight;
