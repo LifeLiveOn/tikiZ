@@ -334,7 +334,7 @@ window.onload = function() {
   
             var message_user = document.createElement('p')
             message_user.setAttribute('class', 'message_user')
-            message_user.textContent = `${name}`
+            message_user.textContent = `${name}#${index}`
   
             var message_content_container = document.createElement('div')
             message_content_container.setAttribute('class', 'message_content_container')
