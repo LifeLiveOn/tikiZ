@@ -13,6 +13,7 @@ window.onload = function() {
     };
     firebase.initializeApp(firebaseConfig);
     // This is very IMPORTANT!! We're going to use "db" a lot.
+    var temp =""
     var db = firebase.database()
     // We're going to use oBjEcT OrIeNtEd PrOgRaMmInG. Lol
   class TikiZ{
@@ -79,6 +80,7 @@ window.onload = function() {
             join_button.onclick = function(){
               // Save the name to local storage. Passing in
               // the join_input.value
+              temp = join_input.value
               parent.save_name(join_input.value)
               // Remove the join_container. So the site doesn't look weird.
               join_container.remove()
@@ -290,7 +292,7 @@ window.onload = function() {
           ordered.forEach(function(data) {
             var name = data.name
             var message = data.message
-            if (name == join_input.value ){
+            if (name == temp ){
             var message_container = document.createElement('div')
             message_container.setAttribute('class', 'message_container')
   
