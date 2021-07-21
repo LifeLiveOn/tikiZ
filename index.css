@@ -1,4 +1,9 @@
-
+html {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.5;
+    background-image: url(images/tikitics.png);
+    background-size: 100% 100%;
+}
 body{
     /* https://www.color-hex.com/color/d3d3d3 */
     background-color: #fff; /*#f6f6f6, EBEBD3, fafafa*/
@@ -17,16 +22,14 @@ body{
     box-sizing: border-box;
   }
   #title_container{
-    width: 100%;
+        width: 100%;
     height: 225px;
-  
     display: flex;
     justify-content: center;
     align-items: center;
-  
-    background-color: #1859a0;;/*#467599;*/
+    background-color: #d2468e;
     border-bottom: 5px solid #fff;
-    box-shadow: 0 0 30px -18px #D64045;
+    box-shadow: 0 0 30px -18px #d64045;
   
   }
   #title_inner_container{
