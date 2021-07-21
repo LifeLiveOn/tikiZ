@@ -30,9 +30,6 @@ body{
     background-color: #d2468e;
     border-bottom: 5px solid #fff;
     box-shadow: 0 0 30px -18px #d64045;
-    background-size: 100% 100%;
-    background-image: url(images/title_banner.png);
-  
   }
   #title_inner_container{
     max-width: 100%;
@@ -48,7 +45,6 @@ body{
     /* font-size: 55px; */
     letter-spacing: 2px;
     /* user-select: none; */
-    padding-top: 80%;
   }
   
   #join_container{
