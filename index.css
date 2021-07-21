@@ -30,6 +30,8 @@ body{
     background-color: #d2468e;
     border-bottom: 5px solid #fff;
     box-shadow: 0 0 30px -18px #d64045;
+	  background-size: 100% 100%;
+    background-image: url(images/title_banner.png);
   }
   #title_inner_container{
     max-width: 100%;
