@@ -313,9 +313,6 @@ window.onload = function() {
             var message_content_container = document.createElement('div')
             message_content_container.setAttribute('class', 'message_content_container')
               
-            var ctime_content = document.createElement('p')
-            ctime_content.setAttribute('class', 'ctime_content')
-            ctime_content.textContent = `${ctime}`
 
             if (name == temp ){
             var cmessage_user = document.createElement('p')
@@ -344,7 +341,6 @@ window.onload = function() {
             message_content_container.append(message_content)
 
               }
-            ctime_content.append(ctime_content)
             message_inner_container.append(message_user_container, message_content_container)
             message_container.append(message_inner_container)
             chat_content_container.append(message_container)
