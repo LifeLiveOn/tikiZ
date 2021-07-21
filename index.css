@@ -122,7 +122,7 @@ body{
     /*justify-content: center; */
   	background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-image: url("images/chatbackground.png");
+    background-image: url("images/chat_box_banner.png");
     float: left;
     margin-top: 40px;
     /* Fade in container */
@@ -141,6 +141,7 @@ body{
     font-family: Varela Round;
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 15px;
   }
   #chat_input_container{
     width: 200%;
@@ -211,30 +212,22 @@ body{
     display: inline-block;
   }
   .message_user{
-    background-color: #978ac1;
+     background-color: #978ac1;
     font-weight: bold;
     font-size: 14px;
-    width: 50%;
-  }
-  .cmessage_user{
-    font-weight: bold;
-    font-size: 14px;
-    width: 50%;
+    width: 40%;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding:5px;
   }
   .message_content_container{
     width: 100%;
     display: inline-block;
-  
     white-space: pre-wrap;
     word-wrap: break-word;
   }
   .message_content{
-    font-weight: normal;
-    font-size: 14px;
-    margin-top: 5px;
-  }
-.cmessage_content{
-    font-weight: normal;
+    font-weight: bold;
     font-size: 14px;
     margin-top: 5px;
   }
@@ -302,4 +295,14 @@ body{
     background: #D64045;
     border-radius: 5px;
   }
-  
+  p.cmessage_user, p.cmessage_content{
+    clear: both; 
+    float: right;
+  }
+  p.cmessage_user{
+    background-color: #f58cab ;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding:5px;
+    font-size: 14px;
+  }
