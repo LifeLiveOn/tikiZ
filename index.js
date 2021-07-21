@@ -15,7 +15,7 @@ window.onload = function() {
     // This is very IMPORTANT!! We're going to use "db" a lot.
     var temp =""
     var today = new Date();
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds
+    var time = today.getHours() + ":" + today.getMinutes() 
     var db = firebase.database()
     console.log(time)
     // We're going to use oBjEcT OrIeNtEd PrOgRaMmInG. Lol
