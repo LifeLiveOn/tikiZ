@@ -1,4 +1,3 @@
-
 body{
     /* https://www.color-hex.com/color/d3d3d3 */
     background-color: #fff; /*#f6f6f6, EBEBD3, fafafa*/
@@ -31,13 +30,14 @@ body{
   }
   #title_inner_container{
     width: 100%;
-    height: 160%;
-  	background-repeat: no-repeat;
- 	background-size: 100% 100%;
+    height: 100%;
+  
     display: flex;
     justify-content: center;
     align-items: center;
-  	background-image: url("images/chat_room_banner.png");
+  
+    /* background-color: #083D77; */
+    border-radius: 200px;
   }
   #title{
     display: inline-block;
@@ -293,4 +293,3 @@ body{
     background: #D64045;
     border-radius: 5px;
   }
-  
