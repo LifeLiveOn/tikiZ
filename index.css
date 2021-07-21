@@ -130,13 +130,11 @@ body{
     height: 100%;
   }
   #chat_content_container{
-    width: 100%;
+    width: 250%;
     height: 90%;
-  
     float: left;
     overflow-y: auto;
     font-family: Varela Round;
-  
     padding-left: 15px;
     padding-right: 15px;
   }
