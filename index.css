@@ -216,9 +216,6 @@ body{
     font-size: 14px;
     width: 50%;
   }
-
-   .cmessage_user{
-  }
   .message_content_container{
     width: 100%;
     display: inline-block;
@@ -231,9 +228,6 @@ body{
     font-size: 14px;
     margin-top: 5px;
   }
-  .cmessage_content{
-  }
-  
   .enabled{
     transition: background-color 0.5s;
     color: #fff;
