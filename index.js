@@ -214,6 +214,7 @@ window.onload = function() {
       // Sends message/saves the message to firebase database
       send_message(message){
         var parent = this
+        localStorage.setItem('time',time)
         // if the local storage name is null and there is no message
         // then return/don't send the message. The user is somehow hacking
         // to send messages. Or they just deleted the
@@ -224,12 +225,13 @@ window.onload = function() {
   
         // Get the firebase database value
         db.ref('chats/').once('value', function(message_object) {
-          // This index is mortant. It will help organize the chat in order
+          // This index is important. It will help organize the chat in order
           var index = parseFloat(message_object.numChildren()) + 1
           db.ref('chats/' + `message_${index}`).set({
             name: parent.get_name(),
             message: message,
-            index: index
+            index: index,
+            time: time
           })
           .then(function(){
             // After we send the chat refresh to get the new messages
@@ -297,6 +299,7 @@ window.onload = function() {
            var name = data.name
             var message = data.message
             var index = data.index
+            var ctime = data.time
             
             var message_container = document.createElement('div')
             message_container.setAttribute('class', 'message_container')
@@ -317,7 +320,7 @@ window.onload = function() {
   
             var cmessage_content = document.createElement('p')
             cmessage_content.setAttribute('class', 'cmessage_content')
-            cmessage_content.textContent = `${message} ${Date.now()}`
+            cmessage_content.textContent = `${message} ${ctime}`
               
             message_user_container.append(cmessage_user)
             message_content_container.append(cmessage_content)
@@ -330,7 +333,7 @@ window.onload = function() {
   
             var message_content = document.createElement('p')
             message_content.setAttribute('class', 'message_content')
-            message_content.textContent = `${message} ${Date.now()}`
+            message_content.textContent = `${message} ${ctime}`
                 
             message_user_container.append(message_user)
             message_content_container.append(message_content)
