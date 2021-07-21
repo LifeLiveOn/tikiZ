@@ -218,10 +218,6 @@ body{
   }
 
    .cmessage_user{
-    background-color: #978ac1;
-    font-weight: bold;
-    font-size: 14px;
-    width: 50%;
   }
   .message_content_container{
     width: 100%;
@@ -235,10 +231,7 @@ body{
     font-size: 14px;
     margin-top: 5px;
   }
-    .cmessage_content{
-    font-weight: normal;
-    font-size: 14px;
-    margin-top: 5px;
+  .cmessage_content{
   }
   
   .enabled{
