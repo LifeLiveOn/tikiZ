@@ -14,10 +14,7 @@ window.onload = function() {
     firebase.initializeApp(firebaseConfig);
     // This is very IMPORTANT!! We're going to use "db" a lot.
     var temp =""
-    var today = new Date();
-    var time = today.getHours() + ":" + today.getMinutes() 
     var db = firebase.database()
-    console.log(time)
     // We're going to use oBjEcT OrIeNtEd PrOgRaMmInG. Lol
   class TikiZ{
       // Home() is used to create the home page
@@ -214,7 +211,6 @@ window.onload = function() {
       // Sends message/saves the message to firebase database
       send_message(message){
         var parent = this
-        localStorage.setItem('time',time)
         // if the local storage name is null and there is no message
         // then return/don't send the message. The user is somehow hacking
         // to send messages. Or they just deleted the
@@ -225,13 +221,12 @@ window.onload = function() {
   
         // Get the firebase database value
         db.ref('chats/').once('value', function(message_object) {
-          // This index is important. It will help organize the chat in order
+          // This index is mortant. It will help organize the chat in order
           var index = parseFloat(message_object.numChildren()) + 1
           db.ref('chats/' + `message_${index}`).set({
             name: parent.get_name(),
             message: message,
-            index: index,
-            time: time
+            index: index
           })
           .then(function(){
             // After we send the chat refresh to get the new messages
@@ -296,10 +291,9 @@ window.onload = function() {
   
           // Now we're done. Simply display the ordered messages
           ordered.forEach(function(data) {
-            var name = data.name
+           var name = data.name
             var message = data.message
             var index = data.index
-            var ctime = data.time
             
             var message_container = document.createElement('div')
             message_container.setAttribute('class', 'message_container')
@@ -312,7 +306,6 @@ window.onload = function() {
           
             var message_content_container = document.createElement('div')
             message_content_container.setAttribute('class', 'message_content_container')
-              
 
             if (name == temp ){
             var cmessage_user = document.createElement('p')
@@ -321,8 +314,8 @@ window.onload = function() {
   
             var cmessage_content = document.createElement('p')
             cmessage_content.setAttribute('class', 'cmessage_content')
-            cmessage_content.textContent = `${message}  at ${ctime}`
-            
+            cmessage_content.textContent = `${message} ${Date.now()}`
+              
             message_user_container.append(cmessage_user)
             message_content_container.append(cmessage_content)
             }
@@ -334,12 +327,13 @@ window.onload = function() {
   
             var message_content = document.createElement('p')
             message_content.setAttribute('class', 'message_content')
-            message_content.textContent = `${message} at ${ctime}`
+            message_content.textContent = `${message} ${Date.now()}`
                 
             message_user_container.append(message_user)
             message_content_container.append(message_content)
-            }
-              
+
+              }
+
             message_inner_container.append(message_user_container, message_content_container)
             message_container.append(message_inner_container)
             chat_content_container.append(message_container)
@@ -361,4 +355,3 @@ window.onload = function() {
     }
   }
   
-
