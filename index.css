@@ -111,17 +111,18 @@ body{
   }
   
   #chat_container{
-    width: 100%;
+     width: 100%;
     height: 450px;
   
     display: flex;
-    justify-content: center;
-  
+    /*justify-content: center; */
+  	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(images/chat_room_banner.png);
     float: left;
     margin-top: 40px;
     /* Fade in container */
     animation: fadeIn 1s linear;
-	background-color: aliceblue;
   
   }
   #chat_inner_container{
