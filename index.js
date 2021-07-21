@@ -171,7 +171,6 @@ window.onload = function() {
               // Send the message. Pass in the chat_input.value
               parent.send_message(chat_input.value)
               // Clear the chat input box
-              parent.send_time(time)
               chat_input.value = ''
               // Focus on the input just after
               chat_input.focus()
@@ -213,7 +212,7 @@ window.onload = function() {
       // Sends message/saves the message to firebase database
       send_message(message){
         var parent = this
-        //localStorage.setItem('time',time)
+        localStorage.setItem('time',time)
         // if the local storage name is null and there is no message
         // then return/don't send the message. The user is somehow hacking
         // to send messages. Or they just deleted the
@@ -231,7 +230,7 @@ window.onload = function() {
             name: parent.get_name(),
             message: message,
             index: index,
-            time: curtime
+            time: time
           })
           .then(function(){
             // After we send the chat refresh to get the new messages
@@ -316,7 +315,7 @@ window.onload = function() {
             if (name == temp ){
             var cmessage_user = document.createElement('p')
             cmessage_user.setAttribute('class', 'cmessage_user')
-            cmessage_user.textContent = `${name}`
+            cmessage_user.textContent = `${name} ${curtime}`
   
             var cmessage_content = document.createElement('p')
             cmessage_content.setAttribute('class', 'cmessage_content')
@@ -329,7 +328,7 @@ window.onload = function() {
 
             var message_user = document.createElement('p')
             message_user.setAttribute('class', 'message_user')
-            message_user.textContent = `${name}`
+            message_user.textContent = `${name} ${curtime}`
   
             var message_content = document.createElement('p')
             message_content.setAttribute('class', 'message_content')
