@@ -1,5 +1,3 @@
-// We enclose this in window.onload.
-// So we don't have ridiculous errors.
 window.onload = function() {
     // Initialize Firebase
     var firebaseConfig = {
@@ -215,7 +213,7 @@ window.onload = function() {
       // Sends message/saves the message to firebase database
       send_message(message){
         var parent = this
-        localStorage.setItem('time',time)
+        //localStorage.setItem('time',time)
         // if the local storage name is null and there is no message
         // then return/don't send the message. The user is somehow hacking
         // to send messages. Or they just deleted the
@@ -322,7 +320,7 @@ window.onload = function() {
   
             var cmessage_content = document.createElement('p')
             cmessage_content.setAttribute('class', 'cmessage_content')
-            cmessage_content.textContent = `${message} ${curtime}`
+            cmessage_content.textContent = `${message}`
               
             message_user_container.append(cmessage_user)
             message_content_container.append(cmessage_content)
@@ -335,7 +333,7 @@ window.onload = function() {
   
             var message_content = document.createElement('p')
             message_content.setAttribute('class', 'message_content')
-            message_content.textContent = `${message} ${curtime}`
+            message_content.textContent = `${message}`
                 
             message_user_container.append(message_user)
             message_content_container.append(message_content)
