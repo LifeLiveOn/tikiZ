@@ -13,9 +13,9 @@ window.onload = function() {
     // This is very IMPORTANT!! We're going to use "db" a lot.
     var temp =""
     var today = new Date();
-    var time = today.getHours() + ":" + today.getMinutes()
+    var ctime = today.getHours() + ":" + today.getMinutes()
     var db = firebase.database()
-    console.log(time)
+    console.log(ctime)
     // We're going to use oBjEcT OrIeNtEd PrOgRaMmInG. Lol
   class TikiZ{
       // Home() is used to create the home page
@@ -212,7 +212,7 @@ window.onload = function() {
       // Sends message/saves the message to firebase database
       send_message(message){
         var parent = this
-        localStorage.setItem('time',time)
+        localStorage.setItem('time',ctime)
         // if the local storage name is null and there is no message
         // then return/don't send the message. The user is somehow hacking
         // to send messages. Or they just deleted the
@@ -230,7 +230,7 @@ window.onload = function() {
             name: parent.get_name(),
             message: message,
             index: index,
-            time: time
+            time: ctime
           })
           .then(function(){
             // After we send the chat refresh to get the new messages
