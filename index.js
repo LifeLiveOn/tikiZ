@@ -296,7 +296,7 @@ window.onload = function() {
   
           // Now we're done. Simply display the ordered messages
           ordered.forEach(function(data) {
-           var name = data.name
+            var name = data.name
             var message = data.message
             var index = data.index
             var ctime = data.time
@@ -323,7 +323,6 @@ window.onload = function() {
             cmessage_content.setAttribute('class', 'cmessage_content')
             cmessage_content.textContent = `${message}  at ${ctime}`
             
-              
             message_user_container.append(cmessage_user)
             message_content_container.append(cmessage_content)
             }
@@ -339,8 +338,8 @@ window.onload = function() {
                 
             message_user_container.append(message_user)
             message_content_container.append(message_content)
-
-              }
+            }
+              
             message_inner_container.append(message_user_container, message_content_container)
             message_container.append(message_inner_container)
             chat_content_container.append(message_container)
