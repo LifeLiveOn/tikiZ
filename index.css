@@ -139,7 +139,7 @@ body{
     padding-right: 15px;
   }
   #chat_input_container{
-    width: 100%;
+    width: 200%;
     height: 10%;
     float: left;
     border-bottom: 2px dashed #1D3354;
@@ -175,17 +175,17 @@ body{
   #chat_logout_container{
     width: 100%;
     display: inline-block;
-  
+    padding: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
   }
   #chat_logout{
-    color: #111827;
+    color: #d2468e;
     cursor: pointer;
-    font-size: larger;
-    font-weight: bold;
+    font-size: large;
+    font-weight: bolder;
   }
   #chat_logout:hover{
     text-decoration: underline;
@@ -207,9 +207,10 @@ body{
     display: inline-block;
   }
   .message_user{
-    background-color:#00c9ff;
+    background-color: #978ac1;
     font-weight: bold;
     font-size: 14px;
+    width: 50%;
   }
   .message_content_container{
     width: 100%;
