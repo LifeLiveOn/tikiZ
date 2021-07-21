@@ -219,7 +219,7 @@ body{
   .cmessage_user{
     font-weight: bold;
     font-size: 14px;
-    float: right;
+    width: 50%;
   }
   .message_content_container{
     width: 100%;
@@ -237,7 +237,6 @@ body{
     font-weight: normal;
     font-size: 14px;
     margin-top: 5px;
-    float: right;
   }
   .enabled{
     transition: background-color 0.5s;
