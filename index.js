@@ -14,8 +14,6 @@ window.onload = function() {
     firebase.initializeApp(firebaseConfig);
     // This is very IMPORTANT!! We're going to use "db" a lot.
     var temp =""
-    var today = new Date();
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds
     var db = firebase.database()
     // We're going to use oBjEcT OrIeNtEd PrOgRaMmInG. Lol
   class TikiZ{
@@ -172,7 +170,6 @@ window.onload = function() {
               // Send the message. Pass in the chat_input.value
               parent.send_message(chat_input.value)
               // Clear the chat input box
-              parent.send_time(time)
               chat_input.value = ''
               // Focus on the input just after
               chat_input.focus()
@@ -211,10 +208,6 @@ window.onload = function() {
         // Save name to localStorage
         localStorage.setItem('name', name)
       }
-      //get time
-      send_time(hour){
-        localStorage.setItem('time',hour)
-      }
       // Sends message/saves the message to firebase database
       send_message(message){
         var parent = this
@@ -225,7 +218,6 @@ window.onload = function() {
         if(parent.get_name() == null && message == null){
           return
         }
-        
   
         // Get the firebase database value
         db.ref('chats/').once('value', function(message_object) {
@@ -234,8 +226,7 @@ window.onload = function() {
           db.ref('chats/' + `message_${index}`).set({
             name: parent.get_name(),
             message: message,
-            index: index,
-            time: curtime
+            index: index
           })
           .then(function(){
             // After we send the chat refresh to get the new messages
@@ -300,10 +291,9 @@ window.onload = function() {
   
           // Now we're done. Simply display the ordered messages
           ordered.forEach(function(data) {
-            var name = data.name
+           var name = data.name
             var message = data.message
             var index = data.index
-            var curtime = data.curtime
             
             var message_container = document.createElement('div')
             message_container.setAttribute('class', 'message_container')
@@ -324,7 +314,7 @@ window.onload = function() {
   
             var cmessage_content = document.createElement('p')
             cmessage_content.setAttribute('class', 'cmessage_content')
-            cmessage_content.textContent = `${message} ${curtime}`
+            cmessage_content.textContent = `${message} ${Date.now()}`
               
             message_user_container.append(cmessage_user)
             message_content_container.append(cmessage_content)
@@ -337,7 +327,7 @@ window.onload = function() {
   
             var message_content = document.createElement('p')
             message_content.setAttribute('class', 'message_content')
-            message_content.textContent = `${message} ${curtime}`
+            message_content.textContent = `${message} ${Date.now()}`
                 
             message_user_container.append(message_user)
             message_content_container.append(message_content)
@@ -347,6 +337,7 @@ window.onload = function() {
             message_inner_container.append(message_user_container, message_content_container)
             message_container.append(message_inner_container)
             chat_content_container.append(message_container)
+              
           });
           // Go to the recent message at the bottom of the container
           chat_content_container.scrollTop = chat_content_container.scrollHeight;
@@ -364,3 +355,4 @@ window.onload = function() {
     }
   }
   
+
