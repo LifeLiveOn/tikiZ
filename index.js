@@ -320,7 +320,7 @@ window.onload = function() {
   
             var cmessage_content = document.createElement('p')
             cmessage_content.setAttribute('class', 'cmessage_content')
-            cmessage_content.textContent = `${message} ${ctime}`
+            cmessage_content.textContent = `${message}  at ${ctime}`
               
             message_user_container.append(cmessage_user)
             message_content_container.append(cmessage_content)
@@ -333,7 +333,7 @@ window.onload = function() {
   
             var message_content = document.createElement('p')
             message_content.setAttribute('class', 'message_content')
-            message_content.textContent = `${message} ${ctime}`
+            message_content.textContent = `${message} at ${ctime}`
                 
             message_user_container.append(message_user)
             message_content_container.append(message_content)
