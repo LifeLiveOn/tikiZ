@@ -216,6 +216,11 @@ body{
     font-size: 14px;
     width: 50%;
   }
+  .cmessage_user{
+    font-weight: bold;
+    font-size: 14px;
+    width: 50%;
+  }
   .message_content_container{
     width: 100%;
     display: inline-block;
@@ -224,6 +229,11 @@ body{
     word-wrap: break-word;
   }
   .message_content{
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+.cmessage_content{
     font-weight: normal;
     font-size: 14px;
     margin-top: 5px;
