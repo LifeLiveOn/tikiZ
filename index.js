@@ -14,7 +14,10 @@ window.onload = function() {
     firebase.initializeApp(firebaseConfig);
     // This is very IMPORTANT!! We're going to use "db" a lot.
     var temp =""
+    var today = new Date();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds
     var db = firebase.database()
+    console.log(time)
     // We're going to use oBjEcT OrIeNtEd PrOgRaMmInG. Lol
   class TikiZ{
       // Home() is used to create the home page
